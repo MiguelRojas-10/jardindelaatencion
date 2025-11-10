@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url('images/jardin.png');
+  background-image: url('Images/jardin.png');
   background-size: cover;   
   background-position: center; 
   background-attachment: fixed;
@@ -389,4 +389,5 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+
 }
