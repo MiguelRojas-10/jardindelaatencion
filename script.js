@@ -30,11 +30,11 @@ const frutasDisponibles = [
 ];
 
 const grupos = [
-  { emoji: "Images/frutas/manzana.png", intruso: "images/intrusos/zapato.png" },
-  { emoji: "Images/frutas/banana.png", intruso: "images/intrusos/ladrillo.png" },
-  { emoji: "Images/frutas/uva.png", intruso: "images/intrusos/lapiz.png" },
-  { emoji: "Images/frutas/fresa.png", intruso: "images/intrusos/caja.png" },
-  { emoji: "Images/frutas/sandia.png", intruso: "images/intrusos/jugo.png" }
+  { emoji: "Images/frutas/manzana.png", intruso: "Images/intrusos/zapato.png" },
+  { emoji: "Images/frutas/banana.png", intruso: "Images/intrusos/ladrillo.png" },
+  { emoji: "Images/frutas/uva.png", intruso: "Images/intrusos/lapiz.png" },
+  { emoji: "Images/frutas/fresa.png", intruso: "Images/intrusos/caja.png" },
+  { emoji: "Images/frutas/sandia.png", intruso: "Images/intrusos/jugo.png" }
 ];
 
 const acertijos = [
@@ -369,4 +369,5 @@ function mostrarDiploma() {
   document.getElementById('nombre-diploma').textContent = nombreJugador;
   document.getElementById('puntaje-final').textContent = puntosAcertijo;
 }
+
 
