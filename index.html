@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Jardín de la Atención</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PANTALLA INICIAL -->
+<div id="pantalla-inicial">
+  <h2>🌟 Bienvenido a El Jardín de la Atención 🌟</h2>
+ <div id="instrucciones-iniciales">
+  <p><strong>🧠 Instrucciones:</strong></p>
+
+  <p><span class="instruccion-titulo">🌱 Juego 1:</span> Haz clic en las plantas con números de <strong>menor a mayor</strong>.  
+  Si te equivocas, el juego se reinicia. Cuando completes toda la secuencia correctamente, pasarás al siguiente juego.</p>
+
+  <p><span class="instruccion-titulo">🍎 Juego 2:</span> Haz clic únicamente en las frutas que sean <strong>manzanas</strong> 🍎.  
+  Cada manzana correcta suma <strong>+1 punto</strong>, las frutas incorrectas restan <strong>–1 punto</strong>.  
+  Cuando termines la tanda de frutas, tendras que darle a
+  <strong>reiniciar frutas</strong> para que salga una tanda nueva.  
+  Tu puntaje se acumula hasta llegar a <strong>20 puntos</strong> para desbloquear el siguiente juego.</p>
+
+  <p><span class="instruccion-titulo">🔍 Juego 3:</span> Se mostrarán 9 objetos en pantalla. Haz clic en el que <strong>no pertenece al grupo</strong>.  
+  Cada acierto suma <strong>+1 punto</strong>, cada error resta <strong>–1 punto</strong>.  
+  Necesitas conseguir al menos <strong>10 puntos</strong> para avanzar.</p>
+
+  <p><span class="instruccion-titulo">🧩 Juego 4:</span> Lee bien cada acertijo y selecciona la respuesta correcta.  
+  Cada acierto suma <strong>+1 punto</strong>, cada error resta <strong>–1 punto</strong>.  
+  Avanza resolviendo los <strong>15 acertijos</strong>.  
+  Al finalizar, recibirás tu <strong>diploma con tu nombre y tu puntaje</strong> 🎓.</p>
+</div>
+  <p>Nombre de usuario:</p>
+  <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+  <br><br>
+  <button id="botonJugar" disabled onclick="iniciarJuegoCompleto()">Jugar</button>
+</div>
+
+<!-- CONTENIDO DEL JUEGO -->
+<div id="contenido-juego" class="oculto">
+
+  <!-- JUEGO 1 -->
+  <div id="juego1" class="juego">
+    <h1>🌱 Juego 1: Ordena los números 🌱</h1>
+    <p class="instruccion-juego">Haz clic en los números de menor a mayor 🌿</p>
+    <div id="temporizador">Tiempo restante: <span id="tiempo">120</span> s</div>
+    <div id="juego"></div>
+    <div id="mensaje"></div>
+    <button id="reiniciar" onclick="iniciarJuego()">Reiniciar 🔁</button>
+    <br><br>
+    <button id="next1" disabled onclick="mostrarJuego(2)">Siguiente juego ➡️</button>
+  </div>
+  <!-- JUEGO 2 -->
+  <div id="juego2" class="juego oculto">
+    <h2>🍎 Juego 2: Atrapa solo las manzanas 🍎</h2>
+    <p class="instruccion-juego">Haz clic solo en las manzanas rojas 🍏</p>
+    <div id="juego-frutas"></div>
+    <p id="puntos"></p>
+    <button id="reiniciar-frutas" onclick="iniciarFrutas()">Reiniciar frutas 🍏</button>
+    <br><br>
+    <button id="next2" disabled onclick="mostrarJuego(3)">Siguiente juego ➡️</button>
+  </div>
+  <!-- JUEGO 3 -->
+  <div id="juego3" class="juego oculto">
+    <h2>🔍 Juego 3: ¡Busca el intruso!</h2>
+    <p class="instruccion-juego">Haz clic en el objeto que no pertenece 🔎</p>
+    <div id="busca-intruso"></div>
+    <p id="puntos-intruso">Puntos: 0</p>
+    <button onclick="iniciarIntruso()">Reiniciar intrusos 🔄</button>
+    <br><br>
+    <button id="next3" disabled onclick="mostrarJuego(4)">Siguiente juego ➡️</button>
+  </div>
+
+  <!-- JUEGO 4 -->
+  <div id="juego4" class="juego oculto">
+    <h2>🧩 Juego 4: ¡Resuelve el acertijo!</h2>
+    <p class="instruccion-juego">Elige la respuesta correcta 💡</p>
+    <div id="acertijo-container">
+      <p id="pregunta-acertijo"></p>
+      <div id="opciones-acertijo"></div>
+    </div>
+    <p id="resultado-acertijo"></p>
+    <p id="puntos-acertijo">Puntos: 0</p>
+    <button id="boton-siguiente-acertijo" onclick="siguienteAcertijo()">Siguiente acertijo ➡️</button>
+    <!-- DIPLOMA -->
+    <div id="diploma" class="oculto">
+      <h2>🎓 ¡Felicidades, <span id="nombre-diploma"></span>! 🎓</h2>
+      <p>Has completado todos los retos con éxito.</p>
+      <p><strong>Tu puntaje final de lógica fue:</strong> <span id="puntaje-final"></span></p>
+      <p>¡Eres un campeón de la concentración! 🏅</p>
+      <img id="imagen-final" src="images/trofeo.png" alt="Trofeo" />
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
