@@ -11,30 +11,30 @@ let indiceAcertijo = 0;
 let puntosAcertijo = 0;
 
 // 🎵 sonidos
-const sonidoCorrecto = new Audio('sounds/correcto.mp3');
+const sonidoCorrecto = new Audio('Sounds/correcto.mp3');
 sonidoCorrecto.volume = 0.1;
-const sonidoError = new Audio('sounds/error.mp3');
-const sonidoVictoria = new Audio('sounds/victoria.mp3');
-const musicaFondo = new Audio('sounds/fondo.mp3');
+const sonidoError = new Audio('Sounds/error.mp3');
+const sonidoVictoria = new Audio('Sounds/victoria.mp3');
+const musicaFondo = new Audio('Sounds/fondo.mp3');
 musicaFondo.loop = true;
 musicaFondo.volume = 0.2;
 sonidoVictoria.volume = 0.2;
 sonidoError.volume = 0.3;
 
 const frutasDisponibles = [
-  "images/frutas/manzana.png",
-  "images/frutas/banana.png",
-  "images/frutas/uva.png",
-  "images/frutas/fresa.png",
-  "images/frutas/sandia.png"
+  "Images/frutas/manzana.png",
+  "Images/frutas/banana.png",
+  "Images/frutas/uva.png",
+  "Images/frutas/fresa.png",
+  "Images/frutas/sandia.png"
 ];
 
 const grupos = [
-  { emoji: "images/frutas/manzana.png", intruso: "images/intrusos/zapato.png" },
-  { emoji: "images/frutas/banana.png", intruso: "images/intrusos/ladrillo.png" },
-  { emoji: "images/frutas/uva.png", intruso: "images/intrusos/lapiz.png" },
-  { emoji: "images/frutas/fresa.png", intruso: "images/intrusos/caja.png" },
-  { emoji: "images/frutas/sandia.png", intruso: "images/intrusos/jugo.png" }
+  { emoji: "Images/frutas/manzana.png", intruso: "images/intrusos/zapato.png" },
+  { emoji: "Images/frutas/banana.png", intruso: "images/intrusos/ladrillo.png" },
+  { emoji: "Images/frutas/uva.png", intruso: "images/intrusos/lapiz.png" },
+  { emoji: "Images/frutas/fresa.png", intruso: "images/intrusos/caja.png" },
+  { emoji: "Images/frutas/sandia.png", intruso: "images/intrusos/jugo.png" }
 ];
 
 const acertijos = [
@@ -369,3 +369,4 @@ function mostrarDiploma() {
   document.getElementById('nombre-diploma').textContent = nombreJugador;
   document.getElementById('puntaje-final').textContent = puntosAcertijo;
 }
+
